@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<style type="text/css">
+body {
+	display: inline-block;
+	vertical-align: middle;
+  	height: 100%;
+}
+legend {color: green; }
+table {text-align: center;}
+fieldset {
+	margin: 0 auto; width: 600px;
+}
+
+input, select { width: 300px;}
+input.answer {width: 150px;}
+header {
+	width: 1000px; height: 150px;
+	border-style: solid; border-color: white white orange white;
+	position: relative; font: bold 55px Verdana;
+}
+footer {
+	width: 1000px; height: 100px;
+	border-style: solid; border-color: orange white white white;
+	position: relative; font: light 15px Verdana;
+
+}
+.t1 {
+	position: absolute; top: 25px; left: 205px; color: black; text-align: center;
+}
+.t2 {
+	position: absolute; top: 20px; left: 200px; color: orange; text-align: center;
+}
+</style>
+<head>
+<meta charset="UTF-8">
+<title>Register Member</title>
+</head>
+<body>
+	<header>
+		<span class="t1">Become a Member</span>
+		<span class="t2">Become a Member</span>
+	</header>
+	<br>
+	<div>
+		<fieldset >
+			<legend>Registration Information</legend>
+			<table width="500" border="0">
+				<tbody>
+					<tr>
+						<td align="right" width="150">Email: </td>
+						<td>
+							<input type="email" id="mail" name="mail">
+						</td>
+					</tr>
+					<tr>
+						<td align="right" width="150">Password: </td>
+						<td>
+							<input type="password" id="pwd" name="pwd" placeholder="At least 6 letters or numbers">
+						</td>
+					</tr>
+					<tr>
+						<td align="right" width="150">Verify Password: </td>
+						<td>
+							<input type="password" id="vpwd" name="verifypwd">
+						</td>
+					</tr>
+				</tbody>
+			</table>	
+		</fieldset>
+		<fieldset>
+			<legend>Member Information</legend>
+			<table width="500" border="0">
+				<tbody>
+					<tr>
+						<td align="right" width="150">First Name: </td>
+						<td>
+							<input type="text" id="fname" name="fname">
+						</td>
+					</tr>
+					<tr>
+						<td align="right" width="150">Last Name: </td>
+						<td>
+							<input type="text" id="lname" name="lname">
+						</td>
+					</tr>
+					<tr>
+						<td align="right" width="150">Address: </td>
+						<td>
+							<input type="text" id="addr" name="addr">
+						</td>
+					</tr>
+					<tr>
+						<td align="right" width="150">City: </td>
+						<td>
+							<input type="text" id="city" name="city">
+						</td>
+					</tr>
+					<tr>
+						<td align="right" width="150">State: </td>
+						<td>
+							<input type="text" id="state" name="state" value="2 character code">
+						</td>
+					</tr>
+					<tr>
+						<td align="right" width="150">ZIP Code: </td>
+						<td>
+							<input type="text" id="zip" name="zip" value="5 or 9 digits">
+						</td>
+					</tr>
+					<tr>
+						<td align="right" width="150">Phone Number: </td>
+						<td>
+							<input type="tel" id="phone" name="phone" value="999-999-9999">
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</fieldset>
+		<fieldset>
+			<legend>Membership Information</legend>
+			<table width="500" border="0">
+				<tbody>
+					<tr>
+						<td align="right" width="150">Membership Type: </td>
+						<td>
+							<select name="membership type">
+								<option value="Junior" selected="selected">Junior
+								<option value="Senior">Senior
+								<option value="Vip">Vip
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td align="right" width="150">Starting Date: </td>
+						<td>
+							<input type="date" id="date" name="date" value="연도-월-일">
+						</td>
+					</tr>
+					<tr>
+						<td align="right" width="150">Tickets for Guests: </td>
+						<td>
+							<input type="number" id="ticket" name="ticket" min="1" value="1">
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</fieldset>
+		<fieldset>
+			<legend>Submit Your Membership</legend>
+			<form>
+				<input class="answer" type="submit" value="Submit" size="60">
+				<input class="answer" type="reset" value="Reset Fields" size="60">
+			</form>
+		</fieldset>
+	</div>
+	<br>
+	<footer>
+		<div style="text-align: right;">&copy; Copyright 2013 SCSA.</div>
+	</footer>
+</body>
+</html>

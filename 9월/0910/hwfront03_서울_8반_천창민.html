@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>lotto</title>
+		<style type="text/css">
+			.circle {
+				background-color: gold;
+				width:150px;
+				height:150px;
+				border-radius:75px;
+				text-align:center;
+				margin:0 auto;
+				font-size:50px;
+				vertical-align:middle;
+				line-height:150px;
+			}
+			header {
+				text-align: center
+			}
+		</style>
+		<script type="text/javascript">
+			function lotto() {
+				var result = Math.ceil(Math.random()*46);
+				document.write('<td class="circle">'+result+"</td>");
+			}
+			document.write("<header><h1>대박을 기원합니다~~</h1></header>");
+			document.write('<table width="1000" height="500" style="background-color: pink;">');
+			document.write("<tr></tr><tr>");
+			for (var i = 0; i < 6; i++) {				
+				var timer = setInterval(lotto(),1000);
+			}
+			window.clearInterval(timer);			
+			document.write("</tr><tr></tr>")
+			document.write("</table>");
+			function td_color() {
+				for(var i=0;i<6;i++) {
+					var num = document.getElementsByTagName('td')[i].childNodes[0].nodeValue;
+					var td = document.getElementsByTagName('td')[i];
+					if(num < 10)
+						td.style.backgroundColor = "gold";
+					else if(num>=10 &&num < 20)
+						td.style.backgroundColor = "lightblue";
+					else if(num>=20 && num < 30)
+						td.style.backgroundColor = "red";
+					else if(num>=30 && num < 40)
+						td.style.backgroundColor = "orchid";
+					else
+						td.style.backgroundColor = "palegreen";
+				}
+			}
+			td_color();
+		</script>
+	</head>
+	<body>
+	</body>
+	</html>

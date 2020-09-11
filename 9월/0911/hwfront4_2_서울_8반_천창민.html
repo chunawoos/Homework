@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>로또프로그램</title>
+		<style type="text/css">
+		    div{
+		        background: skyblue;
+		        width: 1300px;
+		        height: 70px;
+		        padding: 2em;
+		        text-align: center;
+		    }
+		
+		    .number{
+		        display: inline-block;
+		        width: 40px;
+		        height: 40px;
+		        border-radius: 100%;
+		        color: black;
+		        background: yellow;
+		        margin-right: 1em;
+		        text-align: center;
+		        line-height: 40px;
+		        font-size: 120%;
+		        font-weight: bold;
+		    }
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script type="text/javascript">
+		    var numbers;
+		    var count = 0;
+		    var intervalId;
+			$(document).ready(function(){
+			    numbers = selectNumber();
+			    intervalId = setInterval(displayNumber, 1000);
+			})
+		
+			function selectNumber(){
+				var numbers = new Array(6);
+				var flags = new Array(46);
+				for(var i = 0; i < flags.length; ++i){
+					flags[i] = false;
+				}
+				
+				for(var i = 0; i < numbers.length; ++i){
+					var number;
+					do{
+						number = Math.ceil(Math.random() * 45);
+					}while(flags[number] == true);
+					
+					numbers[i] = number;
+					flags[number] = true;
+				}
+				
+				numbers.sort(function(left, right){
+					return left-right;
+				});
+				
+				return numbers;
+			}
+			
+			function displayNumber(){
+			/* result 영역에  로또번호를 카운트를 증가하면서 출력한다..
+				   이때 count가 6이 되면 setInterval()을 멈추도록 한다
+			*/
+				if(count == 6){
+					$('.number').each(function(){
+						let num = $(this).text();
+						if(num < 10)
+							$(this).css("background-color", "gold");
+						else if(num>=10 &&num < 20)
+							$(this).css("background-color", "lightblue");
+						else if(num>=20 && num < 30)
+							$(this).css("background-color", "margenta");
+						else if(num>=30 && num < 40)
+							$(this).css("background-color", "orchid");
+						else
+							$(this).css("background-color", "palegreen");
+					});
+					clearInterval(intervalID);
+					return;
+				}
+				$('#result').append(`<num class="number">${numbers[count]}</num>`);
+				count++;
+			}
+		</script>
+	</head>
+	<body>
+	    <h3 style="text-align: center;">대박을 기원합니다~~</h3>
+	    <div id="result"></div>
+	</body>
+</html>

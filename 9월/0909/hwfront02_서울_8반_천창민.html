@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>My Info</title>
+		<style type="text/css">
+		body {
+			background-image: url('myinfo/sky.jpg');
+		}
+		header, footer, section, nav {
+			display: block;
+		}
+		nav {
+			position: absolute;
+			left: 0;
+			width: 100%;
+			background: url("nav_background.png");
+		}
+		nav ul {
+			margin: 0 auto;
+			width: 940px;
+			list-style: none;
+		}
+		
+		nav ul li {
+			float: left;
+		}
+		
+		nav ul li a {
+			display: block;
+			margin-right: 20px;
+			width: 140px;
+			font-size: 14px;
+			line-height: 44px;
+			text-align: center;
+			text-decoration: none;
+			color: #777;
+		}
+		#intro {
+			float: left;
+			width: 25%;
+			min-height: 1000px;
+			background: pink; */
+		}
+		#intro video, img {
+			width: 100%;
+		}
+		#phil {
+			font-size: 25px;
+			font-weight: bold;
+			text-align: center;
+		}
+		h1 {
+			font-size: 50px;
+			text-align: center;
+		}
+		h2, h3 {
+			text-align: center;
+		} 
+		.intro_table {
+			margin: 70px auto;
+			max-width: 1800px;
+			border: 2px solid gray;
+			background-color: beige;
+		}
+		.intro_table td{
+			text-align: left;
+			padding: 5px;
+			font-size: 20px;
+			
+		}
+		.intro_table h3{
+			font-size: 30px;
+			color: blue;
+		}
+		.food {
+			padding: 1px;
+			border: 1px solid rgba(0, 0, 0, 0.3);
+			height: 250px;
+		}
+
+		.food img{
+			height : 80%;
+			width : 20%;	
+		}
+		.bucket {
+			padding: 10px 20px;
+			font-size: 20px;
+		}
+		
+		footer div {
+			display: table;
+			margin: 0 auto;
+			padding: 10px 0;
+			width: 940px;
+			height: 70px;
+			color: purple;
+		}
+		
+		footer img{
+			padding-left: 10px;
+			height: 150px;
+			width: 100px;
+		}
+		footer h2, h4 {
+			font-style: italic;
+		}
+		</style>
+	</head>
+	<body>
+		<section class="head">
+			<header><h1>천창민의 자기소개</h1></header>	
+			<nav>
+				<ul>
+					<li><a href="#phil">간단한 필모그래피</a></li>
+					<li><a href="#">경력</a></li>
+					<li><a href="#">주거지 이동과정</a></li>
+					<li><a href="#">취미</a></li>
+				</ul>
+			</nav>
+		</section>
+		<section id="intro">
+			<br><br>
+			<header>
+				<img alt="증명사진" src="myPic.bmp">
+				<h2>천창민의 자기소개</h2> 
+				<h3>홈페이지에 오신 것을 </h3>
+				<h3>환영합니다!!!</h3>
+			</header>
+			<video src="myinfo/christmas.mp4" controls="controls"></video>
+			<div id="phil">
+				초등학교 졸업<br>
+				중학교 졸업<br>
+				고등학교 졸업<br>
+				대학교 졸업<br>
+				군대 병장 만기 전역<br>
+				직장 근무 경험 2년 <br>
+				현재 싸피 4기 교육생
+			</div>
+			<h3>창민이의 버킷리스트</h3>
+			<ol class="bucket">
+				<li>헬스장에서 몸만들기</li>
+				<li>제주도에서 한달살기</li>
+				<li>영국 여행가기</li>
+				<li>베이킹 도전하기</li>
+				<li>아무도 없는 아름다운 자연에서 혼자 커피마시기</li>
+				<li>프로그래밍 강의로 유튜브찍어보기</li>
+				<li>나만의 체계적인 프로그래밍 언어 정리본 만들기</li>
+			</ol>
+		</section>
+		<section>
+			<article class="intro_table">
+				<h3>천창민의 자기소개</h3>
+				<table>
+					<tr><td><strong>이름</strong></td><td></td><td></td><td>천창민</td></tr>
+					<tr><td><strong>생년월일</strong></td><td></td><td></td><td>1993.08.29</td></tr>
+					<tr><td><strong>사는 곳</strong></td><td></td><td></td><td>서울시 관악구 신림동</td></tr>
+					<tr><td><strong>좋아하는 것</strong></td><td><td></td></td><td>농구 게임 여행 여자친구 사진찍기</td></tr>
+					<tr><td><strong>좌우명</strong></td><td></td><td></td><td>안해서 걱정이라면 조금이라도 하자</td></tr>
+				</table>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h3 style="font-size: 30px; font-weight: bold;">맛있게 먹은 음식들</h3>
+				<div class="food">
+					<span><img alt="부평 팥빙수" src="myinfo/bingsu.jpg"></span>
+					<span><img alt="부산 분식" src="myinfo/ddukboki.jpg"></span>
+					<span><img alt="제주도 브런치" src="myinfo/eggmelt.jpg"></span>
+				</div>
+				<div class="food">
+					<span><img alt="제주도 새우" src="myinfo/gambas.jpg"></span>
+					<span><img alt="부산 국밥" src="myinfo/kukbab.jpg"></span>
+					<span><img alt="부산 라떼" src="myinfo/latte.jpg"></span>
+				</div>
+				<div class="food">
+					<span><img alt="부산 밀면" src="myinfo/milmyeon.jpg"></span>
+					<span><img alt="부평 롤" src="myinfo/roll.jpg"></span>
+					<span><img alt="제주도 우동" src="myinfo/udong.jpg"></span>
+				</div>
+				
+			</article>
+		</section>
+		<section>
+			
+		</section>
+		<footer>
+			<div>
+				
+				<h1><img alt="고양이 하트" src="myinfo/cat.gif">지금까지 저, 천창민의 자기소개를 감상해주셔서 감사합니다.</h1>
+				<h3 style="text-align: right">&copy;ForOnlyMe 주식회사</h3>	
+			</div>
+		</footer>
+	</body>
+</html>

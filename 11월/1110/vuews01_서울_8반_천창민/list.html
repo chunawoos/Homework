@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WS</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+
+  <body>
+    <div id="app" class="container">
+      <h1 class="text-center">Vue를 이용한 게시판</h1>
+      <div v-if="boards.length">
+        <table class="table table-bordered table-condensed">
+          <colgroup>
+            <col width="10%" />
+            <col width="50%" />
+            <col width="15%" />
+            <col width="25%" />
+          </colgroup>
+          <tr>
+            <th>번호</th>
+            <th>제목</th>
+            <th>작성자</th>
+            <th>날짜</th>
+          </tr>
+          <tr v-for="board in boards">
+            <td>{{board.no}}</td>
+            <td><a :href="link(board)">{{board.title}}</a></td>
+            <!-- <td><a :href="'read.html?no' + board.no"></a></td>-->
+            <td>{{board.writer}}</td>
+            <td>{{board.regtime}}</td>
+          </tr>
+        </table>
+      </div>
+      <div v-else>게시글이 없습니다.</div>
+    </div>
+    <script>
+      new Vue({
+        el: '#list',
+        data: {
+          boards: [
+            {
+              no: 3,
+              title: '프론트엔드 프레임워크',
+              content: 'Vue는 프론트엔드의 인기있는 프레임워크 입니다.',
+              writer: 'ssafy',
+              regtime: '2020-10-30',
+            },
+            {
+              no: 2,
+              title: 'Vue를 배워봅시다',
+              content: 'Vue와 Spring을 연동하자~',
+              writer: 'ssafy',
+              regtime: '2020-09-19',
+            },
+            {
+              no: 1,
+              title: 'Vue Axios 연동',
+              content: 'Vue를 이용한 HTTP 통신',
+              writer: 'ssafy',
+              regtime: '2020-10-26',
+            },
+          ],
+        },
+        methods: {
+          link: function (board) {
+            return 'read.html?no=' + board.no;
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
